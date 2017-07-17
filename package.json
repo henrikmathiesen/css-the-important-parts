@@ -1,0 +1,20 @@
+{
+  "name": "css-the-important-parts",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrikmathiesen/css-the-important-parts.git"
+  },
+  "scripts": {
+    "start":"npm run sass && concurrently \"npm run sass:watch\" \"npm run serve\"",
+    "sass": "node-sass-chokidar src/ -o src/",
+    "sass:watch": "node-sass-chokidar src/ -o src/ --watch --recursive",
+    "serve":"http-server -p 1337"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.0",
+    "http-server": "0.10.0",
+    "node-sass-chokidar": "0.0.3"
+  }
+}
