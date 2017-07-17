@@ -10,7 +10,7 @@
     "start":"npm run sass && concurrently \"npm run sass:watch\" \"npm run serve\"",
     "sass": "node-sass-chokidar src/ -o src/",
     "sass:watch": "node-sass-chokidar src/ -o src/ --watch --recursive",
-    "serve":"http-server -p 1337"
+    "serve":"http-server ./src -p 1337"
   },
   "devDependencies": {
     "concurrently": "3.5.0",
