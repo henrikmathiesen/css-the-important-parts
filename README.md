@@ -8,4 +8,5 @@ https://www.youtube.com/watch?v=G7EIAgfkhmg , 2015
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/ , 2017  
 
 https://css-tricks.com/snippets/css/complete-guide-grid/ , 2017  
+https://www.youtube.com/watch?v=nU0LMoU14n4 , Grid , 2017  
 https://www.youtube.com/watch?v=7kVeCqQCxlk , Grid , 2017
