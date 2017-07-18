@@ -21,7 +21,7 @@ h3 {
     flex-wrap: wrap | nowrap | wrapreverse
     flex-basis: <length>
     
-    justify-content: flex-start | flex-end | center
+    justify-content: flex-start | flex-end | center | space-between
     align-self: flex-start | flex-end | center
     align-items: flex-start | flex-end | center
     align-content: flex-start | flex-end | center
@@ -35,12 +35,46 @@ h3 {
 
 // EXAMPLE
 
-.ip-flex-container-1 {
+// Flex 1
 
+.ip-flex-container-1 {
+    display: flex;                              // align children on x axis, they take up full width
+    align-items: center;                        // By default items have same height (stretch), but this adapts the height and aligns them to y center
+    //flex-direction: column;                   // default is row, this makes it column
+
+    .ip-flex-container-1-item:nth-child(1) {
+        flex: 2;                                // make this div wider
+        // order: 2;                            // change order
+    }
+    .ip-flex-container-1-item:nth-child(2) {
+        flex: 1;
+        // order: 1;
+    }
+    .ip-flex-container-1-item:nth-child(3) {
+        flex: 1;
+        // order: 3;
+    }
 }
 
 .ip-flex-container-1-item {
     background-color: map-get($ip-colors, amethyst);
     color: map-get($ip-colors, cloud);
-    border: 1px solid map-get($ip-colors, dark);
+    border: 2px solid map-get($ip-colors, dark);
+    padding: map-get($ip-gutter, md);
+}
+
+// Flex 2
+
+.ip-flex-container-2 {
+    display: flex;
+    //justify-content: center;                    // flex-start is default (40% gap on the right), this centers all 3
+    //justify-content: space-between;             // evenly spaced from start to end
+    justify-content: space-around;                // even space between, half space before and after
+    //justify-content: space-evenly;              // equal space everywhere, not supported in chrome/IE
+}
+
+.ip-flex-container-2-item {
+    @extend .ip-flex-container-1-item;
+    background-color: map-get($ip-colors, sun);
+    width: 20%;                                 // They are all 20% wide
 }

@@ -13,3 +13,5 @@ https://www.youtube.com/watch?v=nU0LMoU14n4 , Grid , 2017
 https://www.youtube.com/watch?v=7kVeCqQCxlk , Grid , 2017
 
 http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
+
+http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do , 2012
