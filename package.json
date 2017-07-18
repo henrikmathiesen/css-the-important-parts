@@ -7,14 +7,15 @@
     "url": "git+https://github.com/henrikmathiesen/css-the-important-parts.git"
   },
   "scripts": {
-    "start":"npm run sass && concurrently \"npm run sass:watch\" \"npm run serve\"",
-    "sass": "node-sass-chokidar src/ -o src/",
-    "sass:watch": "node-sass-chokidar src/ -o src/ --watch --recursive",
-    "serve":"http-server ./src -p 1337"
+    "start": "npm run sass && concurrently \"npm run sass:watch\" \"npm run serve\"",
+    "sass": "node-sass src/ -o src/",
+    "sass:watch": "onchange \"src/**/*.scss\" -- npm run sass",
+    "serve": "http-server ./src -p 1337"
   },
   "devDependencies": {
     "concurrently": "3.5.0",
     "http-server": "0.10.0",
-    "node-sass-chokidar": "0.0.3"
+    "node-sass": "4.5.3",
+    "onchange": "3.2.1"
   }
 }

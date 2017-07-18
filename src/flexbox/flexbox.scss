@@ -1,6 +1,6 @@
 @import '../settings';
 
 body {
-    background-color: $ip-test;
-    font-size: 12px;
+    background-color: map-get($ip-colors, cloud);
+    color: map-get($ip-colors, dark);
 }
