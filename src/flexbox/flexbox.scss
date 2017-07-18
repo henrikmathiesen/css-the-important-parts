@@ -1,9 +1,15 @@
 @import '../settings';
+@import '../mixins';
 
 body {
     background-color: map-get($ip-colors, cloud);
     color: map-get($ip-colors, dark);
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+    // It works
+    // @include ip-mq-breakpoint-range(md, lg) {
+    //     background-color: pink;
+    // }
 }
 
 h1, 
@@ -40,7 +46,11 @@ h3 {
 .ip-flex-container-1 {
     display: flex;                              // align children on x axis, they take up full width
     align-items: center;                        // By default items have same height (stretch), but this adapts the height and aligns them to y center
-    //flex-direction: column;                   // default is row, this makes it column
+    flex-direction: column;                     // default is row, this makes it column
+
+    @include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
 
     .ip-flex-container-1-item:nth-child(1) {
         flex: 2;                                // make this div wider
@@ -71,10 +81,16 @@ h3 {
     //justify-content: space-between;             // evenly spaced from start to end
     justify-content: space-around;                // even space between, half space before and after
     //justify-content: space-evenly;              // equal space everywhere, not supported in chrome/IE
+    flex-direction: column;
+
+    @include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
 }
 
 .ip-flex-container-2-item {
     @extend .ip-flex-container-1-item;
     background-color: map-get($ip-colors, sun);
-    width: 20%;                                 // They are all 20% wide
+    //width: 20%;                                   // width work, they are all 20% wide
+    flex-basis: 20%;                                // flex-basis is more "flexy" but does the same thing (in our case, see read me)
 }
