@@ -23,13 +23,14 @@ h3 {
     flex-basis: <length>
     
     justify-content: flex-start | flex-end | center | space-between | space-around
-    align-self: flex-start | flex-end | center
     align-items: flex-start | flex-end | center | stretch | baseline (font baseline)
     align-content: flex-start | flex-end | center | space-between | space-around (used when wrapping)
+    align-self: flex-start | flex-end | center | stretch , align itself alone to the top/bottom/middle or stretch out
 
     flex-grow: <number>
     flex-shrink: <number>
-    flex: <number>
+    flex-basis: <number>px (the basis, width or height, before it begins to flex)
+    flex: <number> <number> <number>px , shorthand for flex-grow, flex-shrink and flex-basis
     order: <+-number>
 
 */
