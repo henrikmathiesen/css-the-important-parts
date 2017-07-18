@@ -1,38 +1,68 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Flexbox">
-    <title>Flexbox</title>
-    <link rel="stylesheet" href="flexbox.css">
-  </head>
-  <body>
-    <h1>What is Flexbox?</h1>
-    <ul>
-      <li>Arrange elements in a container</li>
-      <li>No floats</li>
-      <li>Responsive (can also combine with media queries)</li>
-      <li>Positioning child elements is much easier</li>
-      <li>Flex container:s margins do not collapse with the margins of its contents</li>
-      <li>Order of elements can easily be changed without editing source HTML</li>
-    </ul>
-    <h2>Concept</h2>
-    <ul>
-      <li>The ability to alter width and height to best fit in its containers available free space</li>
-      <li>Flexbox is direction-agnostic (in oppose to block which is vertical biased and inline which is horizontal biased)</li>
-      <li>Built for small-scale layouts while the upcomming Grid is for more large scale</li>
-    </ul>
-    <div class="ip-flex-container">
-      <div class="ip-flex-container-item">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis vitae doloribus necessitatibus ullam nemo hic laborum sint quas, quaerat aut, blanditiis quidem natus minima et! Quasi rem, nam odio!
-      </div>
-      <div class="ip-flex-container-item">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, nam, laudantium. Possimus minima eveniet laboriosam minus quo unde inventore culpa amet quaerat ipsum modi fugiat, qui dolorem cumque rerum soluta.
-      </div>
-      <div class="ip-flex-container-item">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore consequatur deleniti pariatur atque voluptatem quis eaque, rem aliquam laboriosam eius repellat nulla numquam porro quos velit amet possimus culpa ipsam.
-      </div>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Flexbox">
+  <title>Flexbox</title>
+  <link rel="stylesheet" href="flexbox.css">
+</head>
+
+<body>
+  <h1>What is Flexbox?</h1>
+  <ul>
+    <li>Arrange elements in a container</li>
+    <li>No floats</li>
+    <li>Responsive (can also combine with media queries)</li>
+    <li>Positioning child elements is much easier</li>
+    <li>Flex container:s margins do not collapse with the margins of its contents</li>
+    <li>Order of elements can easily be changed without editing source HTML</li>
+  </ul>
+  <h2>Browser Support</h2>
+  <p>
+    <a href="http://caniuse.com/#search=flexbox">Bellow Edge has some quirks.</a>
+  </p>
+  <h2>Concept</h2>
+  <ul>
+    <li>The ability to alter width and height to best fit in its containers available free space</li>
+    <li>Flexbox is direction-agnostic (in oppose to block which is vertical biased and inline which is horizontal biased)</li>
+    <li>Built for small-scale layouts while the upcomming Grid is for more large scale</li>
+  </ul>
+
+  <!-- 
+                        main axis
+      main start_______________________________main end
+                                              |cross start
+                                              |
+                                              |cross axis
+                                              |
+                                              |cross end
+    -->
+
+  <div class="ip-flex-container-1">
+    <div class="ip-flex-container-1-item">
+      <h3>Box 1</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis vitae doloribus necessitatibus ullam nemo hic
+        laborum sint quas, quaerat aut, blanditiis quidem natus minima et! Quasi rem, nam odio!
+      </p>
     </div>
-  </body>
+    <div class="ip-flex-container-1-item">
+      <h3>Box 2</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis vitae doloribus necessitatibus ullam nemo hic
+        laborum sint quas, quaerat aut, blanditiis quidem natus minima et! Quasi rem, nam odio!
+      </p>
+    </div>
+    <div class="ip-flex-container-1-item">
+      <h3>Box 3</h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda debitis vitae doloribus necessitatibus ullam nemo hic
+        laborum sint quas, quaerat aut, blanditiis quidem natus minima et! Quasi rem, nam odio!
+      </p>
+    </div>
+  </div>
+</body>
+
 </html>
