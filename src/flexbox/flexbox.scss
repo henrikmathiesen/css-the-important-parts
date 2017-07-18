@@ -5,11 +5,6 @@ body {
     background-color: map-get($ip-colors, cloud);
     color: map-get($ip-colors, dark);
     font-family: Georgia, 'Times New Roman', Times, serif;
-
-    // It works
-    // @include ip-mq-breakpoint-range(md, lg) {
-    //     background-color: pink;
-    // }
 }
 
 h1, 
@@ -79,12 +74,16 @@ h3 {
     display: flex;
     //justify-content: center;                    // flex-start is default (40% gap on the right), this centers all 3
     //justify-content: space-between;             // evenly spaced from start to end
-    justify-content: space-around;                // even space between, half space before and after
+    //justify-content: space-around;                // even space between, half space before and after
     //justify-content: space-evenly;              // equal space everywhere, not supported in chrome/IE
     flex-direction: column;
 
     @include ip-mq-breakpoint-up(md) {
         flex-direction: row;
+    }
+
+    @include ip-mq-breakpoint-range(md, lg){
+        flex-wrap: wrap;
     }
 }
 
