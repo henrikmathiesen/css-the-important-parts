@@ -22,19 +22,25 @@ h3 {
     flex-wrap: wrap | nowrap | wrapreverse
     flex-basis: <length>
     
-    justify-content: flex-start | flex-end | center | space-between
+    justify-content: flex-start | flex-end | center | space-between | space-around
     align-self: flex-start | flex-end | center
-    align-items: flex-start | flex-end | center
-    align-content: flex-start | flex-end | center
+    align-items: flex-start | flex-end | center | stretch | baseline (font baseline)
+    align-content: flex-start | flex-end | center | space-between | space-around (used when wrapping)
 
     flex-grow: <number>
     flex-shrink: <number>
     flex: <number>
-    order: <number>
+    order: <+-number>
 
 */
 
 // EXAMPLE
+
+@mixin flex-container-item(){
+    color: map-get($ip-colors, cloud);
+    border: 2px solid map-get($ip-colors, dark);
+    padding: map-get($ip-gutter, md);
+}
 
 // Flex 1
 
@@ -46,26 +52,24 @@ h3 {
     @include ip-mq-breakpoint-up(md) {
         flex-direction: row;
     }
-
-    .ip-flex-container-1-item:nth-child(1) {
-        flex: 2;                                // make this div wider
-        // order: 2;                            // change order
-    }
-    .ip-flex-container-1-item:nth-child(2) {
-        flex: 1;
-        // order: 1;
-    }
-    .ip-flex-container-1-item:nth-child(3) {
-        flex: 1;
-        // order: 3;
-    }
 }
 
 .ip-flex-container-1-item {
+    @include flex-container-item();
     background-color: map-get($ip-colors, amethyst);
-    color: map-get($ip-colors, cloud);
-    border: 2px solid map-get($ip-colors, dark);
-    padding: map-get($ip-gutter, md);
+}
+
+.ip-flex-container-1-item:nth-child(1) {
+    flex: 2;                                // make this div wider, not as simple as that (see read me)
+    // order: 2;                            // change order
+}
+.ip-flex-container-1-item:nth-child(2) {
+    flex: 1;
+    // order: 1;
+}
+.ip-flex-container-1-item:nth-child(3) {
+    flex: 1;
+    // order: 3;
 }
 
 // Flex 2
@@ -74,7 +78,7 @@ h3 {
     display: flex;
     //justify-content: center;                    // flex-start is default (40% gap on the right), this centers all 3
     //justify-content: space-between;             // evenly spaced from start to end
-    //justify-content: space-around;                // even space between, half space before and after
+    //justify-content: space-around;              // even space between, half space before and after
     //justify-content: space-evenly;              // equal space everywhere, not supported in chrome/IE
     flex-direction: column;
 
@@ -88,7 +92,8 @@ h3 {
 }
 
 .ip-flex-container-2-item {
-    @extend .ip-flex-container-1-item;
+    //@extend .ip-flex-container-1-item;            dangerous (it will extend the nth-child() above, not what we want
+    @include flex-container-item();                 // a mixin will duplicate the css output, but the sass is dry
     background-color: map-get($ip-colors, sun);
     //width: 20%;                                   // width work, they are all 20% wide
     flex-basis: 20%;                                // flex-basis is more "flexy" but does the same thing (in our case, see read me)
