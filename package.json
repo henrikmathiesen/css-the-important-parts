@@ -7,9 +7,9 @@
     "url": "git+https://github.com/henrikmathiesen/css-the-important-parts.git"
   },
   "scripts": {
-    "start": "npm run sass && concurrently \"npm run sass:watch\" \"npm run serve\"",
-    "sass": "node-sass --source-map-embed src/ -o src/",
-    "sass:watch": "onchange \"src/**/*.scss\" -- npm run sass",
+    "start": "npm run sass:dev && concurrently \"npm run sass:watch\" \"npm run serve\"",
+    "sass:dev": "node-sass --source-map-embed --source-map-contents src/ -o src/",
+    "sass:watch": "onchange \"src/**/*.scss\" -- npm run sass:dev",
     "serve": "http-server ./src -p 1337"
   },
   "devDependencies": {
