@@ -11,3 +11,5 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/ , 2017
 https://css-tricks.com/snippets/css/complete-guide-grid/ , 2017  
 https://www.youtube.com/watch?v=nU0LMoU14n4 , Grid , 2017  
 https://www.youtube.com/watch?v=7kVeCqQCxlk , Grid , 2017
+
+http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
