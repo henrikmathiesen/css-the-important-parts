@@ -1,0 +1,18 @@
+.ip-media-object {
+    display: flex;
+    background-color: map-get($ip-colors, honey);
+}
+
+
+.ip-media-object-media {
+    margin-right: map-get($ip-gutter, xs);
+    align-self: center;
+}
+
+.ip-media-object-content {
+    padding: map-get($ip-gutter, lg);
+
+    p {
+        margin: 0;
+    }
+}
