@@ -1,8 +1,4 @@
-@import '../../settings';
-@import '../../mixins';
 @import '../../base';
-
-
 
 /*
 
@@ -54,7 +50,7 @@
 
 .ip-flex-container-1-item:nth-child(1) {
     @include ip-mq-breakpoint-up(md) {
-        flex:2;
+        flex:2;                                 // flex: 2 is the exact same as saying flex-grow: 2; flex-shrink: 1; flex-basis: auto
     }
 }
 .ip-flex-container-1-item:nth-child(2) {

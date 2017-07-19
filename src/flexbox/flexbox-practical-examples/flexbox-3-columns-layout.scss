@@ -1,3 +1,70 @@
-@import '../../settings';
-@import '../../mixins';
 @import '../../base';
+
+body {
+    padding: 0;
+}
+
+.ip-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;              // 100% of height (without setting percentage on parents)
+}
+
+header,
+footer {
+    padding: map-get($ip-gutter, sm);
+    color: map-get($ip-colors, cloud);
+
+    h1,
+    h2 {
+        margin: 0;
+    }
+}
+
+header {
+    background-color: map-get($ip-colors, river);
+}
+
+.ip-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    @include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
+}
+
+.ip-column-01,
+.ip-column-02,
+.ip-column-03 {
+    padding: map-get($ip-gutter, sm);
+    h2 {
+        margin: 0;
+    }
+}
+
+.ip-column-01 {
+    background-color: map-get($ip-colors, cloud);
+    flex: 1;
+}
+
+.ip-column-02,
+.ip-column-03 {
+    @include ip-mq-breakpoint-up(md) {
+        width: 160px;
+    }
+}
+
+.ip-column-02 {
+    background-color: map-get($ip-colors, sun);
+    color: map-get($ip-colors, cloud);
+    order: -1;
+}
+
+.ip-column-03 {
+    background-color: map-get($ip-colors, peach);
+}
+
+footer {
+    background-color: map-get($ip-colors, amethyst);
+}

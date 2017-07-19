@@ -1,4 +1,5 @@
 @import 'settings';
+@import 'mixins';
 @import '../normalize.css/normalize';
 
 html {
@@ -19,4 +20,8 @@ h1,
 h2, 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
+}
+
+.ip-text-intro {
+  font-size: 110%;
 }
