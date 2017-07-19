@@ -9,7 +9,8 @@ https://www.youtube.com/watch?v=H1lREysgdgc , Flexbox , 2015
 https://www.youtube.com/watch?v=JJSoEo8JSnc , Flexbox , 2016  
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/ , 2017  
 https://stackoverflow.com/questions/34352140/what-are-the-differences-between-flex-basis-and-width  
-https://stackoverflow.com/questions/35395691/understanding-the-difference-between-the-flex-and-flex-grow-properties
+https://stackoverflow.com/questions/35395691/understanding-the-difference-between-the-flex-and-flex-grow-properties  
+https://github.com/philipwalton/flexbugs
 
 https://css-tricks.com/snippets/css/complete-guide-grid/ , 2017  
 https://www.youtube.com/watch?v=nU0LMoU14n4 , Grid , 2017  
