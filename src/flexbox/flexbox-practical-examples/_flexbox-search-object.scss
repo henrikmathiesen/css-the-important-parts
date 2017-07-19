@@ -1,0 +1,13 @@
+.ip-search-object {
+    display: flex;
+}
+
+.ip-search-object-form-control {
+    padding: map-get($ip-gutter, sm);
+}
+
+.ip-search-object-form-button {
+    background-color: map-get($ip-colors, success);
+    color: map-get($ip-colors, cloud);
+    font-weight: 600;
+}

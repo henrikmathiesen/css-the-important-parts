@@ -23,12 +23,22 @@ footer {
 
 header {
     background-color: map-get($ip-colors, river);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    @include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
+
 }
 
 .ip-body {
     display: flex;
     flex: 1;
     flex-direction: column;
+    
     @include ip-mq-breakpoint-up(md) {
         flex-direction: row;
     }
@@ -70,3 +80,4 @@ footer {
 }
 
 @import 'flexbox-media-object';
+@import 'flexbox-search-object';

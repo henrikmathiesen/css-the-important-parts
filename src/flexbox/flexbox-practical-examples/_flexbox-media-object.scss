@@ -1,6 +1,7 @@
 .ip-media-object {
     display: flex;
     background-color: map-get($ip-colors, honey);
+    @include ip-margin-top-bottom(map-get($ip-gutter, md));
 }
 
 

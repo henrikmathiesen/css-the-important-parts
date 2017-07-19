@@ -22,12 +22,30 @@ h3 {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p {
+  @include ip-margin-top-bottom(map-get($ip-gutter, md));
+}
+
+.ip-text-intro {
+  font-size: 110%;
+}
+
 // scale up to its max size, scale down if needed, keep proportions
 img {
     max-width: 100%;
     height: auto;
 }
 
-.ip-text-intro {
-  font-size: 110%;
+// FORMS
+
+.ip-form-control {
+  padding: map-get($ip-gutter, xs);
+  border:0;
+}
+
+.ip-form-button {
+  padding: map-get($ip-gutter, xs);
+  border:0;
+  background-color: transparent;
+  cursor: pointer;
 }

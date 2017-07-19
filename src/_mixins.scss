@@ -16,3 +16,8 @@
     @content;
   }
 }
+
+@mixin ip-margin-top-bottom($gutter){
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
