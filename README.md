@@ -7,6 +7,7 @@ Here we explore the css/sass language and design. Some of it will be repetition,
 https://www.youtube.com/watch?v=G7EIAgfkhmg , Flexbox , 2015  
 https://www.youtube.com/watch?v=H1lREysgdgc , Flexbox , 2015  
 https://www.youtube.com/watch?v=JJSoEo8JSnc , Flexbox , 2016  
+https://www.youtube.com/watch?v=k32voqQhODc , Flexbox , 2016  
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/ , 2017  
 https://stackoverflow.com/questions/34352140/what-are-the-differences-between-flex-basis-and-width  
 https://stackoverflow.com/questions/35395691/understanding-the-difference-between-the-flex-and-flex-grow-properties  
