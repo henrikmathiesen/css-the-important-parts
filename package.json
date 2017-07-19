@@ -7,15 +7,16 @@
     "url": "git+https://github.com/henrikmathiesen/css-the-important-parts.git"
   },
   "scripts": {
-    "postinstall":"npm run copy:normalize && npm run rename:normalize",
+    "postinstall": "npm run clean-normalize && npm run copy:normalize && npm run rename:normalize",
     "start": "npm run css:dev && concurrently \"npm run css:watch\" \"npm run serve\"",
     "css:dev": "npm run sass:dev && npm run css:autoprefixer:dev",
     "css:watch": "onchange \"src/**/*.scss\" -- npm run css:dev",
     "sass:dev": "node-sass --source-map-embed --source-map-contents src/ -o src/",
     "css:autoprefixer:dev": "postcss -u autoprefixer --autoprefixer.browsers \"last 3 versions\" -r src/**/*.css",
     "serve": "http-server ./src -p 1337",
+    "clean-normalize": "rimraf ./normalize.css",
     "copy:normalize": "copyfiles -u 1 node_modules/normalize.css/normalize.css ./",
-    "rename:normalize":"renamer --find normalize.css --replace _normalize.scss \"./normalize.css/normalize.css\""
+    "rename:normalize": "renamer --find normalize.css --replace _normalize.scss \"./normalize.css/normalize.css\""
   },
   "devDependencies": {
     "autoprefixer": "7.1.2",
@@ -25,7 +26,8 @@
     "node-sass": "4.5.3",
     "onchange": "3.2.1",
     "postcss-cli": "4.1.0",
-    "renamer": "0.6.1"
+    "renamer": "0.6.1",
+    "rimraf": "2.6.1"
   },
   "dependencies": {
     "normalize.css": "7.0.0"
