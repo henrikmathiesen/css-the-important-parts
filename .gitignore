@@ -1,3 +1,4 @@
 node_modules
 src/**/*.css
+src/_normalize.scss
 npm-debug.log
