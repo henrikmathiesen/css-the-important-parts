@@ -2,17 +2,7 @@
 @import '../../mixins';
 @import '../../base';
 
-body {
-    background-color: map-get($ip-colors, cloud);
-    color: map-get($ip-colors, dark);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
 
-h1, 
-h2, 
-h3 {
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 /*
 
