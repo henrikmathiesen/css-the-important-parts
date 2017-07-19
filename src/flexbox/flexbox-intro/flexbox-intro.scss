@@ -1,5 +1,6 @@
 @import '../../settings';
 @import '../../mixins';
+@import '../../base';
 
 body {
     background-color: map-get($ip-colors, cloud);
@@ -29,9 +30,9 @@ h3 {
 
     flex-grow: <number>
     flex-shrink: <number>
-    flex-basis: <number>px (the basis, width or height, before it begins to flex)
-    flex: <number> <number> <number>px , shorthand for flex-grow, flex-shrink and flex-basis
-    order: <+-number>
+    flex-basis: <number>px/% (the basis, width or height, before it begins to flex)
+    flex: <number> <number> <number>px/% , shorthand for flex-grow, flex-shrink and flex-basis, changes size (see read me)
+    order: <+-number> , change order, default is 0
 
 */
 
@@ -58,19 +59,23 @@ h3 {
 .ip-flex-container-1-item {
     @include flex-container-item();
     background-color: map-get($ip-colors, amethyst);
+    width: 100%                                  // needed for IE11 (also need box-sizing border-box in _base.scss)
 }
 
 .ip-flex-container-1-item:nth-child(1) {
-    flex: 2;                                // make this div wider, not as simple as that (see read me)
-    // order: 2;                            // change order
+    @include ip-mq-breakpoint-up(md) {
+        flex:2;
+    }
 }
 .ip-flex-container-1-item:nth-child(2) {
-    flex: 1;
-    // order: 1;
+    @include ip-mq-breakpoint-up(md) {
+        flex:1;
+    }
 }
 .ip-flex-container-1-item:nth-child(3) {
-    flex: 1;
-    // order: 3;
+    @include ip-mq-breakpoint-up(md) {
+        flex:1;
+    }
 }
 
 // Flex 2
@@ -94,8 +99,13 @@ h3 {
 
 .ip-flex-container-2-item {
     //@extend .ip-flex-container-1-item;            dangerous (it will extend the nth-child() above, not what we want
-    @include flex-container-item();                 // a mixin will duplicate the css output, but the sass is dry
+    @include flex-container-item();                     // a mixin will duplicate the css output, but the sass is dry
     background-color: map-get($ip-colors, sun);
-    //width: 20%;                                   // width work, they are all 20% wide
-    flex-basis: 20%;                                // flex-basis is more "flexy" but does the same thing (in our case, see read me)
+
+    width: 100%;                                        // needed for IE11 (also need box-sizing border-box in _base.scss)
+
+    @include ip-mq-breakpoint-up(md) { 
+        //width: 20%;                                   // width work, they are all 20% wide
+        flex-basis: 20%;                                // flex-basis is more "flexy" but does the same thing (in our case, see read me)
+    }
 }
