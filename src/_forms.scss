@@ -1,0 +1,11 @@
+.ip-form-control {
+  padding: map-get($ip-gutter, xs);
+  border:0;
+}
+
+.ip-form-button {
+  padding: map-get($ip-gutter, xs);
+  border:0;
+  background-color: transparent;
+  cursor: pointer;
+}

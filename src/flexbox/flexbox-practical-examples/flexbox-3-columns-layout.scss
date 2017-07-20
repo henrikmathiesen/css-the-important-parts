@@ -1,4 +1,5 @@
 @import '../../base';
+@import '../../forms';
 
 html {
     height: 100%;                       // A)
@@ -55,9 +56,6 @@ header {
 .ip-column-02,
 .ip-column-03 {
     padding: map-get($ip-gutter, sm);
-    h2 {
-        margin: 0;
-    }
 }
 
 .ip-column-01 {

@@ -36,14 +36,6 @@ body {
     color: map-get($ip-colors, cloud);
     padding: map-get($ip-gutter, sm);
     width: 800px;
-
-    h2 {
-        margin: 0;
-    }
-
-    p {
-        margin-bottom: 0;
-    }
 }
 
 .ip-content-box-25 {
