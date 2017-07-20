@@ -1,0 +1,17 @@
+.ip-center-content {
+    background-color: map-get($ip-colors, dark);
+    color: map-get($ip-colors, cloud);
+    @include ip-margin-top-bottom(map-get($ip-gutter, md));
+    height: 260px;
+    
+    display: flex;
+    
+    //  Does work in IE11
+    align-items: center;
+    justify-content: center;
+
+    // Does not work in IE11
+    // h2 {
+    //     margin: auto;
+    // }
+}
