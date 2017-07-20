@@ -24,3 +24,7 @@ https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 
 http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do , 2012
+
+### node-sass-chokidar
+
+I tried using this, since its more perfomant than recompile everything with onchange. And it does fix the problem node-sass had with detecting new files. But I got some locked files errors, so I went back to onchange.

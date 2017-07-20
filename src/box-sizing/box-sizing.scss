@@ -1,0 +1,46 @@
+@import '../settings';
+@import '../mixins';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.ip-content-box {
+    @include ip-margin-top-bottom(map-get($ip-gutter, md));
+    background-color: map-get($ip-colors, warning);
+    color: map-get($ip-colors, cloud);
+    width: 400px;
+}
+
+.ip-content-box-01 {
+    padding-left: map-get($ip-gutter, sm);
+    padding-right: map-get($ip-gutter, sm);
+}
+
+.ip-content-box-02,
+.ip-content-box-03 {
+    border-left: 5px solid map-get($ip-colors, dark);
+    border-right: 5px solid map-get($ip-colors, dark);
+}
+
+.ip-content-box-03 {
+    padding-left: map-get($ip-gutter, xs);
+    padding-right: map-get($ip-gutter, xs);
+}
+
+.ip-content-box-js {
+    @include ip-margin-top-bottom(map-get($ip-gutter, md));
+    background-color: map-get($ip-colors, warning);
+    color: map-get($ip-colors, cloud);
+    padding: map-get($ip-gutter, sm);
+    width: 800px;
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

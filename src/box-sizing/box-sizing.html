@@ -1,1 +1,49 @@
-<!-- Todo -->
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Box-sizing">
+  <title>Box-sizing</title>
+  <link rel="stylesheet" href="box-sizing.css">
+</head>
+
+<body>
+    <div class="ip-content-box ip-content-box-01">
+        Iam a content box, speced to 400px wide in css.
+        But because of 10px left and right padding,
+        I become 420px wide.
+    </div>
+    <div class="ip-content-box ip-content-box-02">
+        Iam a content box, speced to 400px wide in css.
+        But because of 5px left and right border,
+        I become 410px wide.
+    </div>
+    <div class="ip-content-box ip-content-box-03">
+        Iam a content box, speced to 400px wide in css.
+        But because of 5px left and right border and
+        5px left and right padding I become 420px wide.
+    </div>
+    <div class="ip-content-box-js">
+        <h2>Lets check the last content-box:s width with jQuery</h2>
+        <p>We display it in the console and here</p>
+        <p>.ip-content-box-03, width(), css speced width, 400</p>
+        <p>.ip-content-box-03, innerWidth(), calculated width with padding but not border, 410</p>
+        <p>.ip-content-box-03, outerWidth(), calculated width with padding and border, 420</p>
+    </div>
+    <div class="ip-content-box-js">
+        <h2>Lets check the last content-box:s width with vanilla js</h2>
+        <p>We display it in the console and here</p>
+        <p>No easy way of getting the CSS speced 400px from vanilla js</p>
+        <p>.ip-content-box-03 clientWidth, calculated width with padding but not border, 410</p>
+        <p>.ip-content-box-03 offsetWidth, calculated width with padding and border, 420</p>
+    </div>
+
+    <!-- TODO 25% * 4 -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="box-sizing.js"></script>
+</body>
+
+</html>
