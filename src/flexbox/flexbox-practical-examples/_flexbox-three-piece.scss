@@ -1,0 +1,47 @@
+.ip-three-piece {
+    @include ip-margin-top-bottom(map-get($ip-gutter, md));
+    display: flex;
+    flex-direction: column;
+    
+    @include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
+}
+
+.ip-three-piece-left {
+    background-color: map-get($ip-colors, dark);
+    color: map-get($ip-colors, cloud);
+    padding: map-get($ip-gutter, sm);
+    flex: 1;
+    order: 1;
+
+    @include ip-mq-breakpoint-up(md) {
+        order: 0;
+    }
+
+    p:first-child {
+        margin-top: 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ip-three-piece-right {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.ip-three-piece-right-top {
+    background-color: map-get($ip-colors, honey);
+    padding: map-get($ip-gutter, sm);
+    flex: 1;
+}
+
+.ip-three-piece-right-bottom {
+    background-color: map-get($ip-colors, peach);
+    padding: map-get($ip-gutter, sm);
+    flex: 1;
+}

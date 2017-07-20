@@ -1,19 +1,26 @@
 @import '../../base';
 
+html {
+    height: 100%;                       // A)
+}
+
 body {
+    height: 100%;                       // A)
     padding: 0;
 }
 
 .ip-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;              // 100% of height (without setting percentage on parents)
+    //min-height: 100vh;                // 100% of height (without setting percentage on parents), can expand -- but trouble in IE11
+    height: 100%;                       // A) FOR IE, need to do it like this instead
 }
 
 header,
 footer {
     padding: map-get($ip-gutter, sm);
     color: map-get($ip-colors, cloud);
+    flex-shrink: 0;                     // B) Prevents some older browsers to collapse these elements
 
     h1,
     h2 {
@@ -36,7 +43,7 @@ header {
 
 .ip-body {
     display: flex;
-    flex: 1;
+    flex: 1 0 auto;                         // C) IE fix, explicitly set flex shrink to 0 and flex basis to auto (auto is default in modern browsers, but IE defaults to 0px)
     flex-direction: column;
     
     @include ip-mq-breakpoint-up(md) {
@@ -82,3 +89,4 @@ footer {
 @import 'flexbox-media-object';
 @import 'flexbox-search-object';
 @import 'flexbox-center-content';
+@import 'flexbox-three-piece';
