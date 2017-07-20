@@ -7,30 +7,30 @@ body {
     padding: 0;
 }
 
-.ip-content-box {
+.ip-box {
     @include ip-margin-top-bottom(map-get($ip-gutter, md));
     background-color: map-get($ip-colors, warning);
     color: map-get($ip-colors, cloud);
     width: 400px;
 }
 
-.ip-content-box-01 {
+.ip-box-01 {
     padding-left: map-get($ip-gutter, sm);
     padding-right: map-get($ip-gutter, sm);
 }
 
-.ip-content-box-02,
-.ip-content-box-03 {
+.ip-box-02,
+.ip-box-03 {
     border-left: 5px solid map-get($ip-colors, dark);
     border-right: 5px solid map-get($ip-colors, dark);
 }
 
-.ip-content-box-03 {
+.ip-box-03 {
     padding-left: map-get($ip-gutter, xs);
     padding-right: map-get($ip-gutter, xs);
 }
 
-.ip-content-box-js {
+.ip-box-js-info {
     @include ip-margin-top-bottom(map-get($ip-gutter, md));
     background-color: map-get($ip-colors, warning);
     color: map-get($ip-colors, cloud);
@@ -38,10 +38,14 @@ body {
     width: 800px;
 }
 
-.ip-content-box-25 {
+.ip-box-25 {
     background-color: map-get($ip-colors, danger);
     color: map-get($ip-colors, cloud);
     float: left;
     width: 25%;
     border: 1px solid map-get($ip-colors, dark);
+}
+
+.ip-border-box {
+    box-sizing: border-box;
 }

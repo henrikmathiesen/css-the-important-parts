@@ -2,52 +2,85 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Box-sizing">
-  <title>Box-sizing</title>
-  <link rel="stylesheet" href="box-sizing.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Box-sizing">
+    <title>Box-sizing</title>
+    <link rel="stylesheet" href="box-sizing.css">
 </head>
 
 <body>
-    <div class="ip-content-box ip-content-box-01">
-        Iam a content box, speced to 400px wide in css.
-        But because of 10px left and right padding,
-        I become 420px wide.
+    <h2>content-box</h2>
+    <div class="ip-box ip-box-01">
+        Iam a content box, speced to 400px wide in css. But because of 10px left and right padding, I become 420px wide.
     </div>
-    <div class="ip-content-box ip-content-box-02">
-        Iam a content box, speced to 400px wide in css.
-        But because of 5px left and right border,
-        I become 410px wide.
+    <div class="ip-box ip-box-02">
+        Iam a content box, speced to 400px wide in css. But because of 5px left and right border, I become 410px wide.
     </div>
-    <div class="ip-content-box ip-content-box-03">
-        Iam a content box, speced to 400px wide in css.
-        But because of 5px left and right border and
-        5px left and right padding I become 420px wide.
+    <div class="ip-box ip-box-03 js-content-box-03">
+        Iam a content box, speced to 400px wide in css. But because of 5px left and right border and 5px left and right padding I
+        become 420px wide.
     </div>
-    <div class="ip-content-box-js">
+    <div class="ip-box-js-info">
         <h2>Lets check the last content-box:s width with jQuery</h2>
         <p>We display it in the console and here</p>
-        <p>.ip-content-box-03, width(), calculated width, 400</p>
-        <p>.ip-content-box-03, innerWidth(), calculated width with padding but not border, 410</p>
-        <p>.ip-content-box-03, outerWidth(), calculated width with padding and border, 420</p>
+        <p>.ip-box-03, width(), calculated width, 400</p>
+        <p>.ip-box-03, innerWidth(), calculated width with padding but not border, 410</p>
+        <p>.ip-box-03, outerWidth(), calculated width with padding and border, 420</p>
     </div>
-    <div class="ip-content-box-js">
+    <div class="ip-box-js-info">
         <h2>Lets check the last content-box:s width with vanilla js</h2>
         <p>We display it in the console and here</p>
-        <p>No easy way of getting the CSS speced 400px from vanilla js</p>
-        <p>.ip-content-box-03 clientWidth, calculated width with padding but not border, 410</p>
-        <p>.ip-content-box-03 offsetWidth, calculated width with padding and border, 420</p>
+        <p>No easy way of getting the jQuery width() equivalent</p>
+        <p>.ip-box-03 clientWidth, calculated width with padding but not border, 410</p>
+        <p>.ip-box-03 offsetWidth, calculated width with padding and border, 420</p>
+    </div>
+    <h3>content-box trip up</h3>
+    <div class="ip-clearfix">
+        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
     </div>
 
-    <h2>content-box trip up</h2>
-    <div class="ip-clearfix">
-        <div class="ip-content-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-content-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-content-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-content-box-25">Iam 25% wide, and a 1px border</div>
+    <hr />
+
+    <h2>border-box</h2>
+
+    <div class="ip-box ip-box-01 ip-border-box">
+        Iam a border box, speced to 400px wide in css. With 10px left and right padding.
+        Iam still 400px wide, however the area for the content is 380px.
     </div>
-    
+    <div class="ip-box ip-box-02 ip-border-box">
+        Iam a border box, speced to 400px wide in css. With 5px left and right border.
+        Iam still 400px wide, however the area for the content is 390px.
+    </div>
+    <div class="ip-box ip-box-03 ip-border-box js-border-box-03">
+        Iam a border box, speced to 400px wide in css. With 5px left and right border and 5px left and right padding.
+        Iam still 400px wide, however the area for the content is 380px.
+    </div>
+    <div class="ip-box-js-info">
+        <h2>Lets check the last border-box:s width with jQuery</h2>
+        <p>We display it in the console and here</p>
+        <p>.ip-box-03, width(), calculated width, 380</p>
+        <p>.ip-box-03, innerWidth(), calculated width with padding but not border, 390</p>
+        <p>.ip-box-03, outerWidth(), calculated width with padding and border, 400</p>
+    </div>
+    <div class="ip-box-js-info">
+        <h2>Lets check the last border-box:s width with vanilla js</h2>
+        <p>We display it in the console and here</p>
+        <p>No easy way of getting the jQuery width() equivalent</p>
+        <p>.ip-box-03 clientWidth, calculated width with padding but not border, 390</p>
+        <p>.ip-box-03 offsetWidth, calculated width with padding and border, 400</p>
+    </div>
+    <h3>border-box no trip up</h3>
+    <div class="ip-clearfix">
+        <div class="ip-box-25 ip-border-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-border-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-border-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-border-box">Iam 25% wide, and a 1px border</div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="box-sizing.js"></script>
