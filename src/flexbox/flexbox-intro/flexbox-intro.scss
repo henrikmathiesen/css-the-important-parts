@@ -6,18 +6,20 @@
 
     display: flex | inline flex
     flex-direction: row | column
-    flex-wrap: wrap | nowrap | wrapreverse
-    flex-basis: <length>
+    flex-wrap: wrap | nowrap | wrapreverse , default nowrap
+    flex-flow: <flex-direction> <flex-wrap> , shorthand , default row nowrap
     
     justify-content: flex-start | flex-end | center | space-between | space-around
     align-items: flex-start | flex-end | center | stretch | baseline (font baseline)
     align-content: flex-start | flex-end | center | space-between | space-around (used when wrapping)
     align-self: flex-start | flex-end | center | stretch , align itself alone to the top/bottom/middle or stretch out
 
-    flex-grow: <number>
-    flex-shrink: <number>
-    flex-basis: <number>px/% (the basis, width or height, before it begins to flex)
+    flex-grow: <number> , default 0
+    flex-shrink: <number> , default 1
+    flex-basis: <number>px/% (the basis, width or height, before it begins to flex) , default auto (but default is 0px is IE11)
     flex: <number> <number> <number>px/% , shorthand for flex-grow, flex-shrink and flex-basis, changes size (see read me)
+    It is recommended that you use this shorthand property rather than set the individual properties. The short hand sets the other values intelligently.
+
     order: <+-number> , change order, default is 0
 
 */
