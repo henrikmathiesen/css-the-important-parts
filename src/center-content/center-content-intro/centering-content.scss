@@ -41,10 +41,9 @@
     position: relative;                             // give position context to child
 
     img {
-        position: absolute;
-        left: 50%;
-        top: 50%;                                   // centers elements top left corner
-        transform: (translate(-50%, -50%));         // position the left corner reference point to the center
+        // centers elements top left corner
+        // position the left corner reference point to the center
+        @include ip-center-x-y-translate();
         //display: block;                           // works with block elements also
     }
 }

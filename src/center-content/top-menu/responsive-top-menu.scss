@@ -1,0 +1,51 @@
+@import '../../base';
+
+.ip-nav {
+    ul {
+        @include ip-reset-ul();
+        background-color: map-get($ip-colors, amethyst);
+        text-align: center;
+        font-family: $ip-font-family-sans;
+        font-weight: bold;
+    }
+
+    /*
+    // A) this will center the text on y axsis, but line-height trick will not look good if text spans 2 lines. We use translate instead
+    li {
+        height: 40px;
+        line-height: 40px;
+    }
+    */
+
+    li {
+        height: 40px;
+        position: relative;
+
+        &:hover {
+            background-color: map-get($ip-colors, dark);
+        }
+    }
+
+    li + li {
+        border-top: 1px solid map-get($ip-colors, cloud);
+    }
+
+    a {
+        @include ip-center-y-translate();
+        display: block;
+        width: 100%;
+        padding-top: map-get($ip-gutter, xs);
+        padding-bottom: map-get($ip-gutter, xs);
+        color: map-get($ip-colors, cloud);
+        text-decoration: none;
+    }
+}
+
+
+/*
+
+@include ip-mq-breakpoint-up(md) {
+        flex-direction: row;
+    }
+
+*/
