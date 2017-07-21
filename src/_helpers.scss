@@ -1,29 +1,29 @@
 .ip-float-left {
-  float: left;
+  float: left !important;
 }
 
 .ip-float-right {
-  float: right;
+  float: right !important;
 }
 
 .ip-clearfix:after {
-  display: block;
-  content: "";
-  clear: both;
+  display: block !important;
+  content: "" !important;
+  clear: both !important;
 }
 
 .ip-hide {
-  display: none!important;
+  display: none !important;
 }
 
 .ip-show-for-small-only {
   @include ip-mq-breakpoint-up(md){
-    display: none!important;
+    display: none !important;
   }
 }
 
 .ip-show-for-md-up {
   @include ip-mq-breakpoint-range(sm, md){
-    display: none!important;
+    display: none !important;
   }
 }
