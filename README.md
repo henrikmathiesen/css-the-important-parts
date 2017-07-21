@@ -25,7 +25,8 @@ http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/
 
 http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do , 2012
 
-https://www.youtube.com/watch?v=hIG-fZ2042k , center content , 2014
+https://www.youtube.com/watch?v=hIG-fZ2042k , center content , 2014  
+http://css-snippets.com/simple-horizontal-navigation/ , 2014
 
 ### node-sass-chokidar
 

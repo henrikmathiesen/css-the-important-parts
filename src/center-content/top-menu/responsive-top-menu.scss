@@ -1,5 +1,8 @@
 @import '../../base';
 
+$ip-nav-border: 1px solid map-get($ip-colors, cloud);
+$ip-nav-icon-size: 60px;
+
 .ip-nav {
     ul {
         @include ip-reset-ul();
@@ -10,7 +13,7 @@
     }
 
     li + li {
-        border-top: 1px solid map-get($ip-colors, cloud);
+        border-top: $ip-nav-border;
         @include ip-mq-breakpoint-up(md) { 
             border-top:0;
         }
@@ -31,6 +34,12 @@
             background-color: map-get($ip-colors, river);
         }
 
+        &:first-child {
+            background-color: map-get($ip-colors, amethyst);
+            height: $ip-nav-icon-size;
+            text-align: right;
+        }
+
         @include ip-mq-breakpoint-up(md) {
             display: inline-block;
             margin-right: -4px;
@@ -38,9 +47,13 @@
             padding-left: map-get($ip-gutter, md);
             padding-right: map-get($ip-gutter, md);
 
-            border-right: 1px solid map-get($ip-colors, cloud);
             &:first-child {
-                border-left: 1px solid map-get($ip-colors, cloud);
+                display: none;
+            }
+
+            border-right: $ip-nav-border;
+            &:nth-child(2) {
+                border-left: $ip-nav-border;
             }
         }
     }
@@ -49,5 +62,26 @@
         display: block;
         color: map-get($ip-colors, cloud);
         text-decoration: none;
+    }
+
+    .fa {
+        color: map-get($ip-colors, cloud);
+    }
+
+    .fa-times {
+        display: inline-block;
+        height: $ip-nav-icon-size;
+        width: $ip-nav-icon-size;
+        border-left: $ip-nav-border;
+        text-align: center;
+
+        &:hover {
+            background-color: map-get($ip-colors, river); // make sure it works on mobile
+        }
+
+        &:before {
+            position: relative;
+            top: 12px;
+        }
     }
 }

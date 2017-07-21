@@ -16,6 +16,10 @@ body {
     padding: map-get($ip-gutter, md);
 }
 
+a {
+  color: map-get($ip-colors, river);
+}
+
 h1, 
 h2, 
 h3 {

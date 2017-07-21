@@ -6,14 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Responsive Top Menu">
     <title>Responsive Top Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="responsive-top-menu.css">
 </head>
 
 <body>
     <h1>Responsive Top Menu</h1>
 
-    <div class="ip-nav" role="navigation">
+    <div class="ip-nav js-ip-nav" role="navigation">
         <ul role="menu">
+            <li>
+                <span class="fa fa-2x fa-times" aria-hidden="true"></span>
+            </li>
             <li role="menuitem" aria-selected="false">
                 <a href="#">Home</a>
             </li>
@@ -31,7 +35,9 @@
             </li>
         </ul>
     </div>
-    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="responsive-top-menu.js"></script>
 </body>
 
 </html>
