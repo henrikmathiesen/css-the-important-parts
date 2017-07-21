@@ -1,4 +1,5 @@
 @import '../../base';
+@import '../../helpers';
 
 $ip-nav-border: 1px solid map-get($ip-colors, cloud);
 $ip-nav-icon-size: 60px;
@@ -23,9 +24,7 @@ $ip-nav-icon-size: 60px;
         // this will center the text on y axsis, but line-height trick will not look good if text spans 2 lines -- tried translate but trouble with position absolute on horizontal design
         height: 40px;
         line-height: 40px;
-        
         transition: 0.3s background-color;
-        display: none;
 
         &[aria-selected="true"] {
             background-color: map-get($ip-colors, dark);
@@ -36,22 +35,17 @@ $ip-nav-icon-size: 60px;
         }
 
         &:first-child {
-            display: list-item;
             background-color: map-get($ip-colors, amethyst);
             height: $ip-nav-icon-size;
             text-align: right;
         }
 
         @include ip-mq-breakpoint-up(md) {
-            display: inline-block !important;
+            display: inline-block;
             margin-right: -4px;
 
             padding-left: map-get($ip-gutter, md);
             padding-right: map-get($ip-gutter, md);
-
-            &:first-child {
-                display: none !important;
-            }
 
             border-right: $ip-nav-border;
             &:nth-child(2) {

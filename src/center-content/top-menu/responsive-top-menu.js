@@ -2,12 +2,10 @@ $(function () {
 
     var $nav = $('.js-ip-nav');
     var $icon = $nav.find('.fa-times');
-    var $lisLinks = $nav.find('li:not(li:first-child)');
-    var isExpanded = false;
+    var $menuItems = $nav.find('li[role="menuitem"]');
 
     $icon.click(function () { 
-        $lisLinks.css('display', !isExpanded ? 'list-item' : 'none');
-        isExpanded = !isExpanded;
+        $menuItems.toggleClass('ip-show-for-md-up');
     });
 
 });

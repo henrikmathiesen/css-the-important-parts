@@ -3,3 +3,19 @@
   content: "";
   clear: both;
 }
+
+.ip-hide {
+  display: none!important;
+}
+
+.ip-show-for-small-only {
+  @include ip-mq-breakpoint-up(md){
+    display: none!important;
+  }
+}
+
+.ip-show-for-md-up {
+  @include ip-mq-breakpoint-range(sm, md){
+    display: none!important;
+  }
+}
