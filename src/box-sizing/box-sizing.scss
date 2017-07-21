@@ -35,7 +35,6 @@
 .ip-box-25 {
     background-color: map-get($ip-colors, danger);
     color: map-get($ip-colors, cloud);
-    float: left;
     width: 25%;
     border: 1px solid map-get($ip-colors, dark);
 }
