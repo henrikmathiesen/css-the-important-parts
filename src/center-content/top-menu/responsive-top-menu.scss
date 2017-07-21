@@ -20,9 +20,18 @@
     li {
         height: 40px;
         position: relative;
+        transition: 0.3s background-color;
+
+        &[aria-selected="true"] {
+            background-color: map-get($ip-colors, dark);
+        }
 
         &:hover {
-            background-color: map-get($ip-colors, dark);
+            background-color: map-get($ip-colors, river);
+        }
+
+        @include ip-mq-breakpoint-up(md) {
+            display: inline-block;
         }
     }
 
@@ -40,12 +49,3 @@
         text-decoration: none;
     }
 }
-
-
-/*
-
-@include ip-mq-breakpoint-up(md) {
-        flex-direction: row;
-    }
-
-*/
