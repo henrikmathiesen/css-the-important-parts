@@ -9,17 +9,18 @@
         font-weight: bold;
     }
 
-    /*
-    // A) this will center the text on y axsis, but line-height trick will not look good if text spans 2 lines. We use translate instead
-    li {
-        height: 40px;
-        line-height: 40px;
+    li + li {
+        border-top: 1px solid map-get($ip-colors, cloud);
+        @include ip-mq-breakpoint-up(md) { 
+            border-top:0;
+        }
     }
-    */
 
     li {
+        // this will center the text on y axsis, but line-height trick will not look good if text spans 2 lines -- tried translate but trouble with position absolute on horizontal design
         height: 40px;
-        position: relative;
+        line-height: 40px;
+        
         transition: 0.3s background-color;
 
         &[aria-selected="true"] {
@@ -32,19 +33,20 @@
 
         @include ip-mq-breakpoint-up(md) {
             display: inline-block;
+            margin-right: -4px;
+
+            padding-left: map-get($ip-gutter, md);
+            padding-right: map-get($ip-gutter, md);
+
+            border-right: 1px solid map-get($ip-colors, cloud);
+            &:first-child {
+                border-left: 1px solid map-get($ip-colors, cloud);
+            }
         }
     }
 
-    li + li {
-        border-top: 1px solid map-get($ip-colors, cloud);
-    }
-
     a {
-        @include ip-center-y-translate();
         display: block;
-        width: 100%;
-        padding-top: map-get($ip-gutter, xs);
-        padding-bottom: map-get($ip-gutter, xs);
         color: map-get($ip-colors, cloud);
         text-decoration: none;
     }
