@@ -30,6 +30,7 @@ http://css-snippets.com/simple-horizontal-navigation/ , 2014
 
 https://www.youtube.com/watch?v=qrduUUdxBSY , CSS units , 2015  
 https://www.youtube.com/watch?v=UHf3aQz50jQ , REM or EM , 2015  
+https://css-tricks.com/rems-ems/ , 2014  
 https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7
 
 https://stackoverflow.com/questions/15899615/whats-the-difference-between-css3s-root-pseudo-class-and-html
