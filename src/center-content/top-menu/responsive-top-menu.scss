@@ -44,7 +44,7 @@ $ip-nav-icon-size: 60px;
                 margin-left: map-get($ip-gutter, sm);
                 line-height: $ip-nav-icon-size;
                 color:map-get($ip-colors, cloud);
-                @include rem('font-size', 20px);
+                font-size: 2rem;
             }
         }
 

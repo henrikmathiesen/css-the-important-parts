@@ -11,10 +11,11 @@ html {
 }
 
 body {
+    padding: map-get($ip-gutter, md);
     background-color: map-get($ip-colors, cloud);
     color: map-get($ip-colors, dark);
     font-family: $ip-font-family-serif;
-    padding: map-get($ip-gutter, md);
+    font-size: 1.6rem;
 }
 
 a {
@@ -29,22 +30,22 @@ h3 {
 }
 
 h1 {
-  @include rem('font-size', 32px);
+  font-size: 3.2rem;
   margin-bottom: map-get($ip-gutter, lg);
 }
 
 h2 {
-  @include rem('font-size', 24px);
+  font-size: 2.4rem;
   margin-bottom: map-get($ip-gutter, md);
 }
 
 h3 {
-  @include rem('font-size', 18px);
+  font-size: 1.8rem;
   margin-bottom: map-get($ip-gutter, sm);
 }
 
 p {
-  @include rem('font-size', 16px);
+  font-size: 1.6rem;
   margin: 0;
 }
 
@@ -53,11 +54,11 @@ p + p {
 }
 
 small {
-  @include rem('font-size', 13px);
+  font-size: 1.3rem;
 }
 
 .ip-text-intro {
-  @include rem('font-size', 18px);
+  font-size: 1.8rem;
 }
 
 // scale up to its max size, scale down if needed, keep proportions

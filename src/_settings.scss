@@ -28,6 +28,7 @@ $ip-breakpoints:(
     xl: 1200px
 );
 
-$ip-base-font-size: 16px;
+// it is easier to calculate REMs when base is 10, could also set it to 62.5% (of browser default 16), then user could change text size from browser settings
+$ip-base-font-size: 10px;
 $ip-font-family-sans: Arial, Helvetica, sans-serif;
 $ip-font-family-serif: Georgia, 'Times New Roman', Times, serif;
