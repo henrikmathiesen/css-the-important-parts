@@ -1,11 +1,5 @@
-@import '../settings';
-@import '../mixins';
+@import '../base';
 @import '../helpers';
-
-body {
-    margin: 0;
-    padding: 0;
-}
 
 .ip-box {
     @include ip-margin-top-bottom(map-get($ip-gutter, md));
@@ -44,6 +38,10 @@ body {
     float: left;
     width: 25%;
     border: 1px solid map-get($ip-colors, dark);
+}
+
+.ip-content-box {
+    box-sizing: content-box;
 }
 
 .ip-border-box {

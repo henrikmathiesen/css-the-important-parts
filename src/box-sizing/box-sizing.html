@@ -13,13 +13,13 @@
     <h1>Box Sizing</h1>
 
     <h2>content-box</h2>
-    <div class="ip-box ip-box-01">
+    <div class="ip-box ip-box-01 ip-content-box">
         Iam a content box, speced to 400px wide in css. But because of 10px left and right padding, I become 420px wide.
     </div>
-    <div class="ip-box ip-box-02">
+    <div class="ip-box ip-box-02 ip-content-box">
         Iam a content box, speced to 400px wide in css. But because of 5px left and right border, I become 410px wide.
     </div>
-    <div class="ip-box ip-box-03 js-content-box-03">
+    <div class="ip-box ip-box-03 ip-content-box js-content-box-03">
         Iam a content box, speced to 400px wide in css. But because of 5px left and right border and 5px left and right padding I
         become 420px wide.
     </div>
@@ -39,10 +39,10 @@
     </div>
     <h3>content-box trip up</h3>
     <div class="ip-clearfix">
-        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
-        <div class="ip-box-25">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-content-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-content-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-content-box">Iam 25% wide, and a 1px border</div>
+        <div class="ip-box-25 ip-content-box">Iam 25% wide, and a 1px border</div>
     </div>
 
     <hr />
