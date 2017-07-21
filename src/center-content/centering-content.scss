@@ -17,16 +17,65 @@
 
 .ip-container-text-center {
     text-align: center;
-}
 
-.ip-container-block-text-center {
-    display: inline-block;
+    .ip-container-block {
+        display: inline-block;
+    }
 }
 
 // MARGIN AUTO
 
 .ip-container-margin-auto {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    .ip-container-block,
+    img {
+        display: block;                             // needs to be a block element
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// TRANSLATE
+// - if width and height was known, we could have used negative margins equal to 50% of dimensions
+
+.ip-container-translate {
+    position: relative;                             // give position context to child
+
+    img {
+        position: absolute;
+        left: 50%;
+        top: 50%;                                   // centers elements top left corner
+        transform: (translate(-50%, -50%));         // position the left corner reference point to the center
+        //display: block;                           // works with block elements also
+    }
+}
+
+// TABLE
+
+.ip-container-table {
+    display: table;
+    //width: 100%;                                  // not needed here
+
+    .ip-container-table-cell {
+        display: table-cell;
+        //text-align: center;                       // A) this works if child is an inline element
+        vertical-align: middle;
+
+        img {
+            display: block;                         // B) the child is no longer an inline element
+            margin-left: auto;                      // B) need to do this then
+            margin-right: auto;
+        }
+    }
+}
+
+// FLEX
+
+.ip-container-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    // img {                                           work with block elements also
+    //     display: block;
+    // }
 }
