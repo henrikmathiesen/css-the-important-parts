@@ -41,9 +41,10 @@ $ip-nav-icon-size: 60px;
 
             h1 {
                 margin: 0;
+                margin-left: map-get($ip-gutter, sm);
                 line-height: $ip-nav-icon-size;
                 color:map-get($ip-colors, cloud);
-                // todo: size
+                @include rem('font-size', 20px);
             }
         }
 

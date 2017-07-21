@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: $ip-base-font-size;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -28,18 +29,22 @@ h3 {
 }
 
 h1 {
+  @include rem('font-size', 32px);
   margin-bottom: map-get($ip-gutter, lg);
 }
 
 h2 {
+  @include rem('font-size', 24px);
   margin-bottom: map-get($ip-gutter, md);
 }
 
 h3 {
+  @include rem('font-size', 18px);
   margin-bottom: map-get($ip-gutter, sm);
 }
 
 p {
+  @include rem('font-size', 16px);
   margin: 0;
 }
 
@@ -47,8 +52,12 @@ p + p {
   margin-top: map-get($ip-gutter, sm);
 }
 
+small {
+  @include rem('font-size', 13px);
+}
+
 .ip-text-intro {
-  font-size: 110%;
+  @include rem('font-size', 18px);
 }
 
 // scale up to its max size, scale down if needed, keep proportions

@@ -28,7 +28,11 @@ http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do , 2012
 https://www.youtube.com/watch?v=hIG-fZ2042k , center content , 2014  
 http://css-snippets.com/simple-horizontal-navigation/ , 2014
 
+https://www.youtube.com/watch?v=qrduUUdxBSY , CSS units , 2015  
+https://www.youtube.com/watch?v=UHf3aQz50jQ , REM or EM , 2015  
 https://medium.com/@madhum86/css-font-sizing-pixels-vs-em-vs-rem-vs-percent-vs-viewport-units-b1485716afe7
+
+https://stackoverflow.com/questions/15899615/whats-the-difference-between-css3s-root-pseudo-class-and-html
 
 ### node-sass-chokidar
 
