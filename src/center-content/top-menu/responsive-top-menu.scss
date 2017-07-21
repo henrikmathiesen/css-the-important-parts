@@ -34,10 +34,9 @@ $ip-nav-icon-size: 60px;
             background-color: map-get($ip-colors, river);
         }
 
-        &:first-child {
+        &.ip-show-for-small-only {
             background-color: map-get($ip-colors, amethyst);
             height: $ip-nav-icon-size;
-            text-align: right;
         }
 
         @include ip-mq-breakpoint-up(md) {
