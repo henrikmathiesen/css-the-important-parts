@@ -80,7 +80,7 @@ $ip-nav-icon-size: 60px;
         text-align: center;
 
         &:hover {
-            background-color: map-get($ip-colors, river); // todo: make sure it works on mobile
+            background-color: map-get($ip-colors, river);
         }
 
         &:before {
