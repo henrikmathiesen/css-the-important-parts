@@ -4,7 +4,7 @@ $(function () {
 
     var $nav = $('.js-ip-nav');
     var $icon = $nav.find('.fa-times');
-    var $menuItems = $nav.find('li[role="menuitem"]');
+    var $menuItems = $nav.find('.js-ip-nav-item');
 
     var toggleMenu = function () { 
         $menuItems.toggleClass('ip-show-for-md-up');
