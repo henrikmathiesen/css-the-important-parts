@@ -20,7 +20,7 @@
                     <h1>Responsive Top Menu</h1>
                 </div>
                 <div class="ip-float-right">
-                    <span class="fa fa-2x fa-times" tabindex="0"></span>
+                    <span class="fa fa-2x fa-times" tabindex="0" aria-label="Open menu" role="button"></span>
                 </div>
             </li>
             <li role="menuitem" aria-selected="false" class="ip-show-for-md-up">
@@ -41,15 +41,9 @@
         </ul>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js"></script>
     <script src="responsive-top-menu.js"></script>
 </body>
-
-<!-- 
-    todo: 
-        - keyboard event for drop down, enter key
-        - will a screen reader get that menuItems are visible?
-
--->
 
 </html>
