@@ -19,7 +19,6 @@ $(function () {
             return;
         }
 
-        event.stopPropagation();
         toggleMenu();
     });
 
