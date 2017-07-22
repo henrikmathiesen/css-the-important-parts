@@ -8,9 +8,7 @@ $(function () {
         $menuItems.toggleClass('ip-show-for-md-up');
     };
 
-    $icon.click(function () {
-        toggleMenu();
-    });
+    $icon.click(toggleMenu);
 
     $(window).on('keypress', function (event) {
         if (event.keyCode !== 13) { return; }
