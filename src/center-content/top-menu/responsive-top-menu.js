@@ -1,5 +1,7 @@
 $(function () {
 
+    FastClick.attach(document.body);
+
     var $nav = $('.js-ip-nav');
     var $icon = $nav.find('.fa-times');
     var $menuItems = $nav.find('li[role="menuitem"]');
