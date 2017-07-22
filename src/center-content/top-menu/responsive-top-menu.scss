@@ -24,18 +24,8 @@ $ip-nav-icon-size: 60px;
         // this will center the text on y axsis, but line-height trick will not look good if text spans 2 lines -- tried translate but trouble with position absolute on horizontal design
         height: 40px;
         line-height: 40px;
-        transition: 0.3s background-color;
-
-        &[aria-selected="true"] {
-            background-color: map-get($ip-colors, dark);
-        }
-
-        &:hover {
-            background-color: map-get($ip-colors, river);
-        }
 
         &.ip-show-for-small-only {
-            background-color: map-get($ip-colors, amethyst);
             height: $ip-nav-icon-size;
             line-height: normal;
 
@@ -51,10 +41,6 @@ $ip-nav-icon-size: 60px;
         @include ip-mq-breakpoint-up(md) {
             display: inline-block;
             margin-right: -4px;
-
-            padding-left: map-get($ip-gutter, md);
-            padding-right: map-get($ip-gutter, md);
-
             border-right: $ip-nav-border;
             &:nth-child(2) {
                 border-left: $ip-nav-border;
@@ -66,6 +52,20 @@ $ip-nav-icon-size: 60px;
         display: block;
         color: map-get($ip-colors, cloud);
         text-decoration: none;
+        transition: 0.3s background-color;
+
+        &[aria-selected="true"] {
+            background-color: map-get($ip-colors, dark);
+        }
+
+        &:hover, &:focus {
+            background-color: map-get($ip-colors, river);
+        }
+
+        @include ip-mq-breakpoint-up(md) {
+            padding-left: map-get($ip-gutter, md);
+            padding-right: map-get($ip-gutter, md);
+        }
     }
 
     .fa {
@@ -79,7 +79,7 @@ $ip-nav-icon-size: 60px;
         border-left: $ip-nav-border;
         text-align: center;
 
-        &:hover {
+        &:hover, &:focus {
             background-color: map-get($ip-colors, river);
         }
 
