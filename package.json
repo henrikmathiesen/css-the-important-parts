@@ -30,6 +30,7 @@
     "rimraf": "2.6.1"
   },
   "dependencies": {
+    "font-awesome": "4.7.0",
     "normalize.css": "7.0.0"
   }
 }
