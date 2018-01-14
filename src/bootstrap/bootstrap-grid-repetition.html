@@ -12,10 +12,11 @@
 
 <body>
     <h1>bootstrap Grid Repetition</h1>
-    
+
     <!-- .row has negative left and right margin, to negate .col- padding on the edges, so columns are aligned tight to the edges -->
     <!-- Also note that gutter between .col- are 30px (15x2) since padding is not collapsing (like margin does) -->
     <!-- If we want gutter on the edges we should use a container (rather than mess with .row:s negative margins) -->
+    <!-- Also, from my little testing, it does not seem that custom angular elements interfer with the grid system -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-4">
@@ -30,6 +31,21 @@
             <div class="col-sm-4">
                 COL 3
             </div>
+        </div>
+    </div>
+
+    <h2>Center a column</h2>
+    <!-- https://stackoverflow.com/questions/18153234/center-a-column-using-twitter-bootstrap-3?rq=1 -->
+    <!-- Only even column sizes supported -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">Center me</div>
+        </div>
+    </div>
+    <!-- For odd columns we can use a custom class -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 ip-center-column">Center me</div>
         </div>
     </div>
 </body>
