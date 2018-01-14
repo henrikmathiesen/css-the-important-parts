@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="bootstrap Grid Repetition">
+    <title>bootstrap Grid Repetition</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-grid-repetition.css">
+</head>
+
+<body>
+    <h1>bootstrap Grid Repetition</h1>
+    
+    <!-- .row has negative left and right margin, to negate .col- padding on the edges, so columns are aligned tight to the edges -->
+    <!-- Also note that gutter between .col- are 30px (15x2) since padding is not collapsing (like margin does) -->
+    <!-- If we want gutter on the edges we should use a container (rather than mess with .row:s negative margins) -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="row">
+                    <div class="col-sm-6">COL 1 - A</div>
+                    <div class="col-sm-6">COL 1 - B</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                COL 2
+            </div>
+            <div class="col-sm-4">
+                COL 3
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
