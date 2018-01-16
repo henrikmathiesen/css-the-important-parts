@@ -7,3 +7,15 @@ body {
     margin-left: auto;
     float: none;
 }
+
+.ip-chevron-after-col {
+    padding-right: 30px;
+
+    &:after {
+        font-family: fontawesome;
+        content: '';
+        position: absolute;
+        right: 15px;
+        top:0;
+    }
+}
