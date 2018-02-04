@@ -53,6 +53,14 @@ p + p {
   margin-top: map-get($ip-gutter, sm);
 }
 
+p + h2 {
+  margin-top: map-get($ip-gutter, md);
+}
+
+p + h3 {
+  margin-top: map-get($ip-gutter, sm);
+}
+
 small {
   font-size: 1.3rem;
 }
