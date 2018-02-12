@@ -13,6 +13,12 @@
     background-color: map-get($ip-colors, success);
 }
 
+.ip-container-block-known-dimensions {
+    width: 200px;
+    height: 200px;
+    background-color: map-get($ip-colors, success);
+}
+
 // TEXT CENTER
 
 .ip-container-text-center {
@@ -34,8 +40,21 @@
     }
 }
 
+// POSITION ABSOLUTE
+
+.ip-container-position-absolute {
+    position: relative;
+
+    .ip-container-block-known-dimensions {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+    }
+}
+
 // TRANSLATE
-// - if width and height was known, we could have used negative margins equal to 50% of dimensions
 
 .ip-container-translate {
     position: relative;                             // give position context to child
