@@ -1,0 +1,16 @@
+<uib-accordion>
+    <div class="panel-heading" style="padding-bottom: 0;">
+        <h4 class="panel-title" style="background-color:grey;padding: 15px;">
+            <a href tabindex="0" class="accordion-toggle" style="color:white;font-family:sans-serif;font-size: 22px;" ng-click="isOpen = !isOpen">
+                Fastigheter
+            </a>
+        </h4>
+    </div>
+    <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="border-top:0;padding-top: 0;">
+            <div style="background-color:darkgrey;">
+                <entity-summary entities="entities"></entity-summary>
+            </div>
+        </div>
+    </div>
+</uib-accordion>

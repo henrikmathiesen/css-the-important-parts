@@ -12,19 +12,19 @@
 </head>
 
 <body ng-app="main" ng-controller="mainController as mainCtrl" ng-cloak="">
-    <h1>List Directives</h1>
-    <p>
-        Hantera mitten kolumn, andel
-    </p>
 
     <div class="ip-left-panel">
         <entity-summary entities="[mainCtrl.fastighet]"></entity-summary>
         <entity-summary entities="mainCtrl.fastigheter"></entity-summary>
+        <!-- <entity-summary parent-entity="{id: 2}"></entity-summary> -->
+        <accordian entities="mainCtrl.fastigheterWithInfo"></accordian>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <script src="main.module.js"></script>
     <script src="main.controller.js"></script>
+    <script src="directives/accordian.js"></script>
     <script src="directives/entity-summary.js"></script>
 </body>
 

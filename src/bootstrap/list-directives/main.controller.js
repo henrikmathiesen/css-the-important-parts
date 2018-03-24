@@ -54,15 +54,20 @@ function mainController() {
             fastighet: mainCtrl.fastigheter[0]
         },
         {
-            andel: 25,
+            andel: 30,
             fastighet: mainCtrl.fastigheter[1]
         },
         {
-            andel: 25,
+            andel: 20,
             fastighet: mainCtrl.fastigheter[2]
         },
-
     ];
+
+    mainCtrl.fastigheterWithInfo = mainCtrl.fastigheterOmAndelar.map((fastAndAndel) => {
+        // An array with a custom made object, entity-summary directive needs to have an interface matching this (if using TypeScript)
+        return Object.assign({}, {info: fastAndAndel.andel.toString() + '%' }, fastAndAndel.fastighet);
+    });
+
 }
 
 angular

@@ -5,9 +5,14 @@
     display: none !important;
 }
 
+body, 
+html {
+    height: 100%;
+}
+
 .ip-left-panel {
     width: 550px;
-    min-height: 600px;
+    height: 100%;
     background-color: lightgray;
 }
 
@@ -16,9 +21,8 @@
     padding: map-get($ip-gutter, md);
 
     .ip-icon {
-        vertical-align: middle;
-
         &.ip-entity-icon-big {
+            vertical-align: middle;
             font-size: 32px;
         }
     }
