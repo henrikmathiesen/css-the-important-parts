@@ -10,3 +10,22 @@
     min-height: 600px;
     background-color: lightgray;
 }
+
+.ip-entity-summary {
+    font-family: $ip-font-family-sans;
+    padding: map-get($ip-gutter, md);
+
+    .ip-icon {
+        vertical-align: middle;
+
+        &.ip-entity-icon-big {
+            font-size: 32px;
+        }
+    }
+
+    .label {
+        position: relative;
+        top: -2px;
+    }
+
+}

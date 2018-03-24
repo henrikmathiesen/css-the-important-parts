@@ -18,8 +18,9 @@ body {
     font-size: 1.6rem;
 }
 
-a {
+a, a:visited, a:focus, a:hover, a:active {
   color: map-get($ip-colors, river);
+  text-decoration: none;
 }
 
 h1, 
