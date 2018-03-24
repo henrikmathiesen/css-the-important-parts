@@ -1,0 +1,12 @@
+@import '../../base';
+@import '../../helpers';
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+.ip-left-panel {
+    width: 550px;
+    min-height: 600px;
+    background-color: lightgray;
+}
