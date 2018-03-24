@@ -47,6 +47,22 @@ function mainController() {
             geo: false
         }
     ];
+
+    mainCtrl.fastigheterOmAndelar = [
+        {
+            andel: 50,
+            fastighet: mainCtrl.fastigheter[0]
+        },
+        {
+            andel: 25,
+            fastighet: mainCtrl.fastigheter[1]
+        },
+        {
+            andel: 25,
+            fastighet: mainCtrl.fastigheter[2]
+        },
+
+    ];
 }
 
 angular
