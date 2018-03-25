@@ -1,9 +1,8 @@
 <div class="ip-entity-summaries">
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="entity in entities">
-            <entity-summary entity="entity" single="single"></entity-summary>
+            <entity-summary entity="entity" single="single" has-children="entity[subEntityName]"></entity-summary>
             <ul class="list-group" ng-show="entity[subEntityName]">
-                <li class="list-group-item fa" ng-class="{'fa-chevron-down': !entity.expanded, 'fa-chevron-up': entity.expanded }" ng-click="entity.expanded = !entity.expanded"></li>
                 <li class="list-group-item" ng-repeat="subEntity in entity[subEntityName]" ng-show="entity.expanded">
                     <entity-summary entity="subEntity"></entity-summary>
                 </li>

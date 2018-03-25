@@ -4,6 +4,7 @@ function entitySummary() {
         scope: {
             entity: '=',
             single: '=?',
+            hasChildren: '=?'
         },
         templateUrl: 'directives/entity-summary.html',
         link: function (scope) {

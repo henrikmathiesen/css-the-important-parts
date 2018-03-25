@@ -1,6 +1,6 @@
 <div>
     <span class="fa fa-user ip-icon {{'ip-icon-' + entity.type}}" title="{{ entity.type }}" ng-class="{ 'ip-entity-icon-big': single }"></span>
-    <a href="#" title="{{entity.benamning}}">{{ getLabelTruncated(entity.benamning) }}</a>
+    <a href="#" title="{{entity.benamning}}">{{ getLabelTruncated(entity.beskrivning || entity.benamning) }}</a>
     
     <span class="pull-right">
         <span class="label label-success">{{ entity.status }}</span>
@@ -9,5 +9,6 @@
         <span class="fa fa-link"></span>
         <span class="fa fa-pinterest" ng-show="entity.geo"></span>
         <span class="fa fa-map-marker" ng-show="entity.geo"></span>
+        <span class="fa" ng-show="hasChildren" ng-class="{'fa-chevron-down': !entity.expanded, 'fa-chevron-up': entity.expanded }" ng-click="entity.expanded = !entity.expanded"></span>
     </span>
 </div>
