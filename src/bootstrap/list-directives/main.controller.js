@@ -48,7 +48,44 @@ function mainController() {
         }
     ];
 
-    mainCtrl.fastigheterOmAndelar = [
+    mainCtrl.fastigheterWithByggnader = [
+        {
+            id: 13,
+            type: 'Fastighet',
+            benamning: 'Det var en gång',
+            status: 'Ägd',
+            geo: true,
+            byggnader: [
+                {
+                    id: 1,
+                    benamning: 'Byggnad 1',
+                    status: 'Ägd',
+                    geo: true
+                },
+                {
+                    id: 2,
+                    benamning: 'Byggnad med en verkligen riktigt riktigt lång benämning',
+                    status: 'Ägd',
+                    geo: true
+                },
+                {
+                    id: 3,
+                    benamning: 'Byggnad 3',
+                    status: 'Ägd',
+                    geo: true
+                },
+            ]
+        },
+        {
+            id: 14,
+            type: 'Fastighet',
+            benamning: 'Storboden 11:3',
+            status: 'Aktiv',
+            geo: false
+        }
+    ];
+
+    var fastigheterOmAndelar = [
         {
             andel: 50,
             fastighet: mainCtrl.fastigheter[0]
@@ -63,11 +100,10 @@ function mainController() {
         },
     ];
 
-    mainCtrl.fastigheterWithInfo = mainCtrl.fastigheterOmAndelar.map((fastAndAndel) => {
+    mainCtrl.fastigheterWithInfo = fastigheterOmAndelar.map((fastAndAndel) => {
         // An array with a custom made object, entity-summary directive needs to have an interface matching this (if using TypeScript)
-        return Object.assign({}, {info: fastAndAndel.andel.toString() + '%' }, fastAndAndel.fastighet);
+        return Object.assign({}, { info: fastAndAndel.andel.toString() + '%' }, fastAndAndel.fastighet);
     });
-
 }
 
 angular

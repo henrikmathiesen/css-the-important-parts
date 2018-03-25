@@ -13,6 +13,10 @@
                 <span class="fa fa-pinterest" ng-show="entity.geo"></span>
                 <span class="fa fa-map-marker" ng-show="entity.geo"></span>
             </span>
+
+            <ul class="list-group" ng-show="subEntityName">
+                <li class="list-group-item" ng-repeat="subEntity in entity[subEntityName]"></li>
+            </ul>
         </li>
     </ul>
 </div>

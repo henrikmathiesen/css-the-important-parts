@@ -5,6 +5,7 @@ function entitySummary() {
         scope: {
             entities: '=?',
             parentEntity: '=?',
+            subEntityName: '@'
         },
         templateUrl: 'directives/entity-summary.html',
         link: function (scope) {
