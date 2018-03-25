@@ -3,7 +3,7 @@ function entitySummary() {
         restrict: 'E',
         scope: {
             entity: '=',
-            single: '=?'
+            single: '=?',
         },
         templateUrl: 'directives/entity-summary.html',
         link: function (scope) {

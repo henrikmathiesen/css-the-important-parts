@@ -20,6 +20,14 @@ html {
     font-family: $ip-font-family-sans;
     padding: map-get($ip-gutter, md);
 
+    .list-group {
+        margin: 0;
+    
+        .list-group {
+            margin-top: map-get($ip-gutter, xs);
+        }
+    }
+
     .ip-icon {
         &.ip-entity-icon-big {
             vertical-align: middle;

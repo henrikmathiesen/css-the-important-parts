@@ -82,8 +82,63 @@ function mainController() {
             benamning: 'Storboden 11:3',
             status: 'Aktiv',
             geo: false
+        },
+        {
+            id: 15,
+            type: 'Fastighet',
+            benamning: 'Lorem ipsum dolores',
+            status: 'Aktiv',
+            geo: true,
+            byggnader: [
+                {
+                    id: 1,
+                    benamning: 'Byggnad 1',
+                    status: 'Ägd',
+                    geo: true
+                },
+                {
+                    id: 2,
+                    benamning: 'Byggnad med en verkligen riktigt riktigt lång benämning',
+                    status: 'Ägd',
+                    geo: true
+                },
+                {
+                    id: 3,
+                    benamning: 'Byggnad 3',
+                    status: 'Ägd',
+                    geo: true
+                },
+            ]
         }
     ];
+
+    mainCtrl.fastighetWithByggnader = {
+        id: 13,
+        type: 'Fastighet',
+        benamning: 'Det var en gång',
+        status: 'Ägd',
+        geo: true,
+        byggnader: [
+            {
+                id: 1,
+                benamning: 'Byggnad 1',
+                status: 'Ägd',
+                geo: true
+            },
+            {
+                id: 2,
+                benamning: 'Byggnad med en verkligen riktigt riktigt lång benämning',
+                status: 'Ägd',
+                geo: true
+            },
+            {
+                id: 3,
+                benamning: 'Byggnad 3',
+                status: 'Ägd',
+                geo: true
+            },
+        ]
+    }
 
     var fastigheterOmAndelar = [
         {

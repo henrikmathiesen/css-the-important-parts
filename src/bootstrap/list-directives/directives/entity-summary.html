@@ -1,10 +1,9 @@
 <div>
     <span class="fa fa-user ip-icon {{'ip-icon-' + entity.type}}" title="{{ entity.type }}" ng-class="{ 'ip-entity-icon-big': single }"></span>
     <a href="#" title="{{entity.benamning}}">{{ getLabelTruncated(entity.benamning) }}</a>
-
-    <span class="label label-success">{{ entity.status }}</span>
-
+    
     <span class="pull-right">
+        <span class="label label-success">{{ entity.status }}</span>
         <span ng-show="entity.info">{{entity.info}}</span>
         <span class="fa fa-circle"></span>
         <span class="fa fa-link"></span>
