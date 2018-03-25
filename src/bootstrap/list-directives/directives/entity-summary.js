@@ -1,11 +1,9 @@
 function entitySummary() {
-
     return {
         restrict: 'E',
         scope: {
-            entities: '=?',
-            parentEntity: '=?',
-            subEntityName: '@'
+            entity: '=',
+            single: '=?'
         },
         templateUrl: 'directives/entity-summary.html',
         link: function (scope) {
@@ -25,30 +23,8 @@ function entitySummary() {
                 return words;
             };
 
-            if (!scope.entities) {
-                // make ajax call with
-                console.log(scope.parentEntity.id);
-                scope.entities = [
-                    {
-                        id: 1,
-                        type: 'Fastighet',
-                        benamning: 'Lorem ipsum dolores es sitamet',
-                        status: 'Aktiv',
-                        geo: true
-                    },
-                    {
-                        id: 2,
-                        type: 'Fastighet',
-                        benamning: 'Lorem ipsum dolores es sitamet',
-                        status: 'Aktiv',
-                        geo: true
-                    },
-                ]
-            }
-
         }
     };
-
 }
 
 angular

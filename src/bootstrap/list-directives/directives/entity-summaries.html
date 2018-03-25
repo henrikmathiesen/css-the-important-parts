@@ -1,0 +1,12 @@
+<div class="ip-entity-summaries">
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="entity in entities">
+            <entity-summary entity="entity" single="single"></entity-summary>
+            <ul class="list-group" ng-show="subEntityName">
+                <li class="list-group-item" ng-repeat="subEntity in entity[subEntityName]">
+                    <entity-summary entity="subEntity"></entity-summary>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

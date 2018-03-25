@@ -14,9 +14,9 @@
 <body ng-app="main" ng-controller="mainController as mainCtrl" ng-cloak="">
 
     <div class="ip-left-panel">
-        <entity-summary entities="[mainCtrl.fastighet]"></entity-summary>
-        <entity-summary entities="mainCtrl.fastigheter"></entity-summary>
-        <entity-summary entities="mainCtrl.fastigheterWithByggnader" sub-entity-name="{{'byggnader'}}"></entity-summary>
+        <entity-summaries entities="[mainCtrl.fastighet]" single="true"></entity-summaries>
+        <entity-summaries entities="mainCtrl.fastigheter"></entity-summaries>
+        <entity-summaries entities="mainCtrl.fastigheterWithByggnader" sub-entity-name="{{'byggnader'}}"></entity-summaries>
         <!-- <entity-summary parent-entity="{id: 2}"></entity-summary> -->
         <accordian entities="mainCtrl.fastigheterWithInfo"></accordian>
     </div>
@@ -26,6 +26,7 @@
     <script src="main.module.js"></script>
     <script src="main.controller.js"></script>
     <script src="directives/accordian.js"></script>
+    <script src="directives/entity-summaries.js"></script>
     <script src="directives/entity-summary.js"></script>
 </body>
 
