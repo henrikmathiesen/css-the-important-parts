@@ -140,6 +140,17 @@ function mainController() {
         ]
     }
 
+    mainCtrl.overlatelserWithFastigheterAndByggnader = [
+        {
+            id: 01,
+            type: 'Ingalundelse',
+            benamning: 'Lorem ipsum dolores es sitamet',
+            status: 'God',
+            geo: true,
+            fastigheter: mainCtrl.fastigheterWithByggnader
+        }
+    ];
+
     var fastigheterOmAndelar = [
         {
             andel: 50,
@@ -159,6 +170,8 @@ function mainController() {
         // An array with a custom made object, entity-summary directive needs to have an interface matching this (if using TypeScript)
         return Object.assign({}, { info: fastAndAndel.andel.toString() + '%' }, fastAndAndel.fastighet);
     });
+
+    console.log(mainCtrl.overlatelserWithFastigheterAndByggnader);
 }
 
 angular
