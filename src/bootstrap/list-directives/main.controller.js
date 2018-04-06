@@ -140,16 +140,15 @@ function mainController() {
         ]
     }
 
-    mainCtrl.overlatelserWithFastigheterAndByggnader = [
-        {
+    mainCtrl.overlatelseWithFastigheterAndByggnader = {
             id: 01,
-            type: 'Ingalundelse',
+            type: 'Overlatelse',
             benamning: 'Lorem ipsum dolores es sitamet',
             status: 'God',
             geo: true,
             fastigheter: mainCtrl.fastigheterWithByggnader
-        }
-    ];
+    }
+    
 
     var fastigheterOmAndelar = [
         {
