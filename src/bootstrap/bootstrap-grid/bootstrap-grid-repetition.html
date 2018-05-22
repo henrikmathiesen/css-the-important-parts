@@ -35,6 +35,41 @@
         </div>
     </div>
 
+    <h2>Container in a Container</h2>
+    <!-- Not optimal design results, but nothing crazy -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                COL1
+            </div>
+            <div class="col-md-6">
+                COL2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <hr>
+            </div>
+            <div class="col-md-6">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <hr>
+                        </div>
+                        <div class="col-md-6">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <h2>Center a column</h2>
     <!-- https://stackoverflow.com/questions/18153234/center-a-column-using-twitter-bootstrap-3?rq=1 -->
     <!-- Only even column sizes supported -->
