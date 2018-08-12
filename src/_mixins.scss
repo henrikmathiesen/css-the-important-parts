@@ -1,5 +1,3 @@
-@import 'settings';
-
 @mixin ip-mq-breakpoint-up($breakpoint) {
     $breakpoint: map-get($ip-breakpoints, $breakpoint);
     
