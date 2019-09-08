@@ -10,6 +10,7 @@
     "postinstall": "npm run clean-normalize-folder && npm run copy:normalize && npm run rename:normalize",
     "start": "npm run sass:dev && npm-run-all --parallel sass:watch serve",
     "build": "npm run sass:build && npm run css:autoprefixer",
+    "---":"---",
     "sass:dev": "node-sass-chokidar --source-map-embed --source-map-contents src/ -o src/",
     "sass:build": "node-sass-chokidar src/ -o src/",
     "sass:watch": "node-sass-chokidar --source-map-embed --source-map-contents src/ -o src/ --watch --recursive",
