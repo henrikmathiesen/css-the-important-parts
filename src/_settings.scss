@@ -34,3 +34,5 @@ $ip-breakpoints:(
 $ip-base-font-size: 10px;
 $ip-font-family-sans: Arial, Helvetica, sans-serif;
 $ip-font-family-serif: Georgia, 'Times New Roman', Times, serif;
+
+$ip-nav-border: 1px solid map-get($ip-colors, cloud);

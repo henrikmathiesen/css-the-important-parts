@@ -36,3 +36,37 @@ body {
         background-position-y: -260px;
     }
 }
+
+.ip-top-menu-col {
+    padding: 0;
+}
+
+.ip-top-menu {
+    @include ip-reset-ul();
+    background-color: map-get($ip-colors, river);
+
+    li {
+        border-right: $ip-nav-border;
+        padding: map-get($ip-gutter, md);
+
+        flex: 1; // equal size
+
+        text-align: center;
+
+        &:last-child {
+            border-right: 0;
+        }
+
+        a {
+            color: black;
+            display: block;
+            text-decoration: underline;
+
+            position: relative;
+
+            &:active {
+                top: 2px;
+            }
+        }
+    }
+}
