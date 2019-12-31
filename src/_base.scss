@@ -63,7 +63,7 @@ p + h3 {
 }
 
 small {
-  font-size: 1.3rem;
+  font-size: 1.3rem; // could use percent instead so it scales within its context (p, h2, h3 etc)
 }
 
 .ip-text-intro {

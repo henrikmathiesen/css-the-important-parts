@@ -13,6 +13,7 @@ $ip-colors:(
     warning: rgba(#e67e22, 1)
 );
 
+// padding in rem would have been better (but this version of bootstrap, v3, uses px also)
 $ip-gutter:(
     xs: 5px,
     sm: 10px,
@@ -29,9 +30,10 @@ $ip-breakpoints:(
 );
 
 // It is easier to calculate REMs when base is 10, could also set it to 62.5% (of browser default 16), then user could change text size from browser settings
-// Not optimal though, if third party library uses REM with 16 as base!
+// Not optimal though, if third party library uses REM with 16 as base! In this project however we use bootstrap 3 at the moment, which sets font size in pixels.
 // rem calc, see angular-x-routing
-$ip-base-font-size: 10px;
+// $ip-base-font-size: 10px;
+$ip-base-font-size: 62.5%;
 $ip-font-family-sans: Arial, Helvetica, sans-serif;
 $ip-font-family-serif: Georgia, 'Times New Roman', Times, serif;
 
