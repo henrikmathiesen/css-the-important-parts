@@ -71,20 +71,31 @@ $ip-nav-icon-size: 60px;
         color: map-get($ip-colors, cloud);
     }
 
-    .fa-times {
+    .ip-menu-container {
+        border-left: $ip-nav-border;
+        
+        &:hover, &:focus {
+            background-color: map-get($ip-colors, river);
+            outline: 0;
+        }
+    }
+
+    .ip-menu-icon {
         display: inline-block;
         height: $ip-nav-icon-size;
         width: $ip-nav-icon-size;
-        border-left: $ip-nav-border;
         text-align: center;
 
-        &:hover, &:focus {
-            background-color: map-get($ip-colors, river);
-        }
+        transform: rotate(45deg);
+        transition: transform 0.5s;
 
         &:before {
             position: relative;
             top: 12px;
+        }
+
+        &.ip-menu-open {
+            transform: rotate(0deg);
         }
     }
 }
