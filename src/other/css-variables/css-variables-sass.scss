@@ -4,6 +4,9 @@
     https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
     https://developer.mozilla.org/en-US/docs/Web/CSS/--*
     No suppport in IE 11 (and SASS compiler doesnt make it work in IE 11 either)
+
+    Can use for theming, update variables instead of writing new CSS
+    https://css-tricks.com/css-custom-properties-theming/
 */
 
 :root {
