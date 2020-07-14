@@ -1,0 +1,27 @@
+/* 
+    SASS
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+    https://developer.mozilla.org/en-US/docs/Web/CSS/--*
+    No suppport in IE 11 (and SASS compiler doesnt make it work in IE 11 either)
+*/
+
+:root {
+    --text-color: #2ECC40;
+}
+
+h1,
+h2,
+h3,
+p {
+    color: var(--text-color);
+}
+
+.app-some-container {
+    --text-color: pink; /* A1) Will override the variable for selectors in this context */
+}
+
+.app-some-container h2,
+.app-some-container p {
+    color: var(--text-color); /* A2) Like here */
+}
