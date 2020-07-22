@@ -28,6 +28,10 @@ $(function () {
     //
     // Testing transition callback (X button shown on mobile)
     // https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
+    //
+    // Also works for CSS animations
+    // https://stackoverflow.com/questions/6186454/is-there-a-callback-on-completion-of-a-css3-animation
+
 
     $('.ip-menu-icon').on('transitionend', () => {
         console.log('transitionend jquery');
