@@ -1,5 +1,14 @@
+// https://css-tricks.com/couple-takes-sticky-footer/#there-is-flexbox
+// https://getbootstrap.com/docs/5.0/utilities/flex/
+
 body {
     background-color: lightgray;
+}
+
+html, 
+body,
+.container {
+    height: 100%;
 }
 
 header, 
@@ -7,4 +16,8 @@ footer {
     background-color: white;
     padding: 3rem;
     margin-bottom: 1rem;
+}
+
+footer {
+    margin-bottom: 0;
 }
